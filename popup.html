@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple tool to extract M3U8 links.">
+  <meta name="author" content="Your Name">
+  <title>M3U8 Link Extractor</title>
+  <style>
+    body {
+      width: 300px;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 5px 0;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      /* 确保内容不会溢出 */
+      > div:first-child {
+        width: calc(100% - 60px);
+        overflow-x: scroll;
+      }
+      > div:first-child::-webkit-scrollbar {
+        display: none; /* Chrome 和 Safari 隐藏滚动条 */
+      }
+      > div:last-child{
+        width: 50px;
+      }
+    }
+
+    button {
+      background-color: #7dc9f1;
+      width: 100%;
+      border-radius: 4px;
+      color: white;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+      flex-shrink: 0;
+      /* 防止按钮被压缩 */
+    }
+  </style>
+</head>
+
+<body>
+  <h3>M3U8 Links</h3>
+  <ul id="m3u8-list"></ul>
+  <script src="popup.js"></script>
+</body>
+
+</html>
